@@ -1,0 +1,172 @@
+@media(max-width:1320px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .helping_brand{
+        display: block;
+    }
+
+    .helping_brand_right{
+        margin-left: 8vw;
+        padding-top: 0;
+    }
+
+    .helping_brand_left h2{
+        line-height: 0.7;
+    }
+
+    .craftimg{
+        padding-left: 8vw;
+    }
+    .bega_text h2{
+        margin-right: -8vw;
+      }
+}
+
+@media(max-width:1220px){
+    .bega_text h2{
+      margin-right: -8vw;
+    }
+
+    .california_text h2{
+        margin-right: -5vw;
+}
+    .featured_projects_text h2{
+        margin-right: -5vw;
+    }
+    
+    .videos{
+        width:100%;
+    }
+    .text_video h1 {
+      font-size: 11rem;
+        
+    }
+}
+
+@media(max-width:1180){
+    .videos h1{
+        width: 900px;
+        height: 330px;
+    }
+}
+
+
+@media(max-width:1100px){
+    .discovery{
+        display: block;
+    }
+
+    .discovery_right{
+        padding-left: 8vw;
+    }
+
+    .discovery_left{
+        padding-right: 3vw;
+    }
+
+    #discovery{
+        padding-right: 20vw;
+    }
+
+    .craftimg_topic2 h2{
+        padding-left: 19vw;
+    }
+}
+
+
+@media(max-width:1020px){
+
+   .project,.california,.BEGA{
+      display:flex;
+      flex-direction: column-reverse;
+   }
+
+   .bega_img,.california_img,.project_img,.newdiv,.california_text,.bega_text{
+      padding-left: 20vw;
+   }
+
+   .featured_projects_text h2,.california_text h2,.bega_text h2{
+    margin-right: 0px;
+   }
+
+   .trust{
+    display: block;
+   }
+
+   .trust_rightsection{
+    padding-left: 8vw;
+   }
+
+   .awardimg{
+    display: grid;
+    grid-template-columns: 40% 40%;
+   }
+
+   .craftimg_topic2 h2{
+    font-size: 1.2em;
+   }
+
+   #intro2,#intro3,#intro{
+    width:20vw;
+    height: auto;
+   }
+
+   #intro3{
+    position: absolute;
+    top:5400vh;
+   }
+
+   .craftimg h1{
+    font-size: 11rem;
+   }
+
+   .videos video{
+    height:280px;
+    width: 760px;
+   }
+
+   .craftimg p{
+    padding-right: 0px;
+   }
+}
+
+
+@media(max-width:950px){
+
+    .craftimg_topic2 h2{
+        padding-left: 15vw;
+    }
+}
+
+@media(max-width:900px){
+    .craftimg h1{
+        font-size: 10rem;
+       }
+
+       .videos video{
+        height:255px;
+        width:690px;
+       }  
+       
+       .videos h1{
+        margin-bottom: 0px;
+        top: -50;
+        height:300px;
+       }
+}
+
+
+
+@media(max-width:790px){
+
+    .craftimg h1{
+        font-size: 8rem;
+       }
+
+       .videos video{
+        height:180px;
+        width:550px
+       }   
+}
