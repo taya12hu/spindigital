@@ -10,6 +10,9 @@ window.addEventListener('scroll',function(){
         header.style.color='black';
         headright.style.marginTop='1vh';
         spin.style.marginTop='2vh';
+        spin.style.filter="brightness(0%)";
+        spin.style.paddingTop="1vh";
+        spin.style.height='3vh';
         
     }
 
@@ -19,6 +22,8 @@ window.addEventListener('scroll',function(){
         headright.style.marginTop='4vh';
         spin.style.marginTop='5vh';
         spin.style.color='black';
+        spin.style.filter='brightness(100%)';
+        spin.style.height='4vh';
     }
 })
 
@@ -211,10 +216,12 @@ function show_hide_function6(){
 }
 
 function open_connect(){
+    
     var y=document.querySelector(".connect_info");
     var create_info=document.querySelector(".create_info");
     var evolve_info=document.querySelector(".evolve_info")
-    var connect=document.getElementById("connect");
+    var connect=document.getElementById("connect")
+
     if(y.style.display==="block"){
         y.style.display="none";
         connect.style.backgroundColor="white";
@@ -231,9 +238,11 @@ function open_connect(){
 }
 
 function open_create(){
+    
     var y=document.querySelector(".create_info");
     var connect_info=document.querySelector(".connect_info");
-    var evolve_info=document.querySelector(".evolve_info")
+    var evolve_info=document.querySelector(".evolve_info");
+
     if(y.style.display==="none"){
         y.style.display="block";
         y.style.paddingBottom="40vh";
@@ -247,6 +256,7 @@ function open_create(){
 }
 
 function open_evolve(){
+    
     var y=document.querySelector(".evolve_info");
     var connect_info=document.querySelector(".connect_info");
     var create_info=document.querySelector(".evolve_info")
@@ -259,7 +269,9 @@ function open_evolve(){
         connect_info.style.display="none";
         create_info.style.display="none";
     }
+    
 }
+
 
 let moves = document.querySelector('.moves');
 let moving = document.querySelector('.moving_section');
@@ -270,17 +282,56 @@ moves.addEventListener('scroll', () => {
   moving.style.transform = `translateX(-${scrollY}px)`;
 });
 
+
+  //backgroundimage move
+  learn_section3.addEventListener('mouseenter', function(e){
+    moving_img.style.opacity=0.5;
+  })
+  learn_section3.addEventListener('mouseleave', function(e){
+    moving_img.style.opacity=0;
+  })
 /*
-  
+  window.addEventListener("pointermove",(e)=>{
+    console.log("suh")
+    const {clientX , clientY} = e;
+   
+      moving_img.style.top=`${clientY}px`;
+      moving_img.style.left=`${clientX}px`;
+  });
+*/
 
-  let moving=document.querySelector("moving_section");
-  let moving2=document.querySelector("moving_section1");
-  let move=document.querySelector("moves")
-  
-  
-  moves.onscroll=function(){
-    var newLeftPosition = move.scrollTop;
-    textElementl.style.left = '-' + newLeftPosition + 'px';
+//leftright
 
-  }
-  */
+
+const scrollinglr = ()=>{
+    console.log("shvx");
+    const scroll = document.querySelector(".moving_section");
+    const scroll1= document.querySelector(".moving_section1");
+    const scroll2 = document.querySelector(".moving_section2");
+    const scroll3 = document.querySelector(".moving_section3");
+   
+    if(document.querySelector(".moving_section").getBoundingClientRect().top != 100){
+      let val = document.querySelector(".moving_section").getBoundingClientRect().top - 120;
+      let val2 = val*0.2;
+      scroll.style.transform = `translateX(${val2}px)`
+    }
+
+    if(document.querySelector(".moving_section1").getBoundingClientRect().top != 100){
+        let val =  - document.querySelector(".moving_section1").getBoundingClientRect().top - 100;
+        let val2 = val*0.2;
+        scroll1.style.transform = `translateX(${val2}px)`
+      }
+
+      if(document.querySelector(".moving_section2").getBoundingClientRect().top != 100){
+        let val = document.querySelector(".moving_section2").getBoundingClientRect().top - 100;
+        let val2 = val*0.2;
+        scroll2.style.transform = `translateX(${val2}px)`
+      }
+
+      if(document.querySelector(".moving_section3").getBoundingClientRect().top != 100){
+        let val =  - document.querySelector(".moving_section3").getBoundingClientRect().top - 100;
+        let val2 = val*0.2;
+        scroll3.style.transform = `translateX(${val2}px)`
+      }
+}
+window.addEventListener("scroll", scrollinglr);
